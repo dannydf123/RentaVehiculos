@@ -15,7 +15,7 @@ public class JavaApplication8 {
         if (carrosPararenta>0){
              mostrarCarrosDisponibles(autos);
             Cliente cliente = ingresarCliente();
-            JOptionPane
+            
         }
         
         else {
@@ -117,6 +117,7 @@ public class JavaApplication8 {
 }
     
 }
+
 
 
 
