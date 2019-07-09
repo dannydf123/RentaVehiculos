@@ -39,7 +39,12 @@ public class frmMenu extends javax.swing.JFrame {
             // read line by line
             String line;
             String placas = "";
+            String modelos = "";
+            boolean disponibles;
+            String precio = "";
+            
             int i, j = 0;
+            
             while ((line = br.readLine()) != null) {
                 i = 0;
  
@@ -51,7 +56,36 @@ public class frmMenu extends javax.swing.JFrame {
                 miscarros.placas[j] = placas;
                 System.out.println(miscarros.placas[j]);
                 placas = "";
-                j++;
+                i++;
+                while (line.charAt(i) != ';') {
+                    modelos += line.charAt(i);
+                    i++;
+                }
+                //System.out.println(placas);
+                miscarros.modelos[j] = modelos;
+                System.out.println(miscarros.modelos[j]);
+                modelos = "";
+                i++;
+                
+                while (line.charAt(i) != ';') {
+                    placas += line.charAt(i);
+                    i++;
+                }
+                //System.out.println(placas);
+                miscarros.disponibles[j] = disponibles;
+                System.out.println(miscarros.disponibles[j]);
+                disponibles;
+                i++;
+                
+                while (line.charAt(i) != ';') {
+                    disponibles += line.charAt(i);
+                    i++;
+                }
+                //System.out.println(placas);
+                miscarros.placas[j] = placas;
+                System.out.println(miscarros.placas[j]);
+                placas = "";
+                i++;
             }
  
         } catch (IOException e) {
